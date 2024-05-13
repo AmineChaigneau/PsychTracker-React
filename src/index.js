@@ -1,3 +1,10 @@
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme/theme';
+
+export const ThemeWrapper = ({ children }) => {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+};
+
 // Components
 import { Button, ButtonIcon, ButtonMT, Checkbox, Dialog, Radio, RangeNumber, RangeSlider, Slider, TextArea, Typography, Select } from './components';
 
