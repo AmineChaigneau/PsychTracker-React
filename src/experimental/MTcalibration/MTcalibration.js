@@ -1,8 +1,8 @@
 // File: src/experimental/MTcalibration/MTcalibration.js
 import React, { useState, useEffect } from 'react';
-import style from '../../styles/style.css';
+import style from './MTcalibration.module.css';
 import { useMouseTracker, useDeadlines } from '../../hooks';
-import { Dialog, Button, MTbutton, Typography } from '../../components';
+import { Dialog, Button, ButtonMT, Typography } from '../../components';
 import TrajectoryCanvas from './TrajectoryCanvas';
 
 /**
@@ -109,8 +109,8 @@ function MTcalibration({ initialTrialCount, initialSide }) {
                 {trialCount > 0 && <TrajectoryCanvas mouseData={mouseData} clear={clearCanvas} />}
             </div>
             <div className={style.choice}>
-                <MTbutton disabled={side === 'right' || disabled.option} style={{ opacity: side === 'right' ? 0 : 1 }} onClick={handleResponseSelection}></MTbutton>
-                <MTbutton disabled={side === 'left' || disabled.option} style={{ opacity: side === 'left' ? 0 : 1 }} onClick={handleResponseSelection}></MTbutton>
+                <ButtonMT disabled={side === 'right' || disabled.option} style={{ opacity: side === 'right' ? 0 : 1 }} onClick={handleResponseSelection}></ButtonMT>
+                <ButtonMT disabled={side === 'left' || disabled.option} style={{ opacity: side === 'left' ? 0 : 1 }} onClick={handleResponseSelection}></ButtonMT>
             </div>
             <div className={style.start}>
                 <Button className='outlined' onClick={handleStartButtonClick} disabled={disabled.square}>+</Button>

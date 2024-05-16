@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../styles/style.css'
+import style from './MTdefault.module.css'
 
 const MTdefault = () => (
-  <div className='root'>
+  <div className={style.root}>
     <h1>MT default starting procedure</h1>
   </div>
 );

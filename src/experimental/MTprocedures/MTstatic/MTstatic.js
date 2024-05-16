@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../styles/style.css'
+import style from './MTstatic.module.css'
 
 const MTstatic = () => (
-  <div className='root'>
+  <div className={style.root}>
     <h1>MT static starting procedure</h1>
   </div>
 );
